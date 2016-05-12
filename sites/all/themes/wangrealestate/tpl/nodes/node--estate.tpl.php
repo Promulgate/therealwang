@@ -13,6 +13,12 @@
   </div>
 
   <div>
+    <?php if (!empty($baths)): ?>
+      <?php print $baths; ?>
+    <?php endif; ?>
+  </div>
+
+  <div>
     <?php if (!empty($list_price)): ?>
       <?php foreach ($list_price as $key => $price): ?>
         <?php print $price; ?>
@@ -86,7 +92,9 @@
 
   <div>
     <?php if (!empty($geolocation)): ?>
-      <?php print $geolocation; ?>
+      <?php foreach ($geolocation as $key => $geo): ?>
+        <?php print $geo; ?>
+      <?php endforeach; ?>
     <?php endif; ?>
   </div>
 </article>

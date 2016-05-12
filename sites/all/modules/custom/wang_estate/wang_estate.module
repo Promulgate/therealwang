@@ -11,6 +11,7 @@ function wang_estate_preprocess_node(&$variables) {
   $node = $variables['node'];
 
   $variables['beds'] = get_field($node, 'field_bed');
+  $variables['baths'] = get_field($node, 'field_bath');
   $variables['list_price'] = get_field($node, 'field_list_price');
   $variables['cost_sqft'] = get_field($node, 'field_cost_sqft');
   $variables['sqft'] = get_field($node, 'field_sqft');
@@ -21,7 +22,7 @@ function wang_estate_preprocess_node(&$variables) {
   $variables['mls'] = get_field($node, 'field_mls');
   $variables['description'] = get_field($node, 'field_description');
   $variables['address'] = get_field($node, 'field_address');
-  $variables['geolocation'] = get_field($node, 'field_bath');
+  $variables['geolocation'] = get_field($node, 'field_geolocation');
 
   $images = get_field($node, 'field_image');
   $image_paths = array();
