@@ -1,0 +1,5 @@
+name = wangrealestate
+description = Custom theme for wangrealestate.us.
+core = 7.x
+
+region[content] = Content
