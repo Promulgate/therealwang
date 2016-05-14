@@ -45,6 +45,13 @@
         'weight' => 0,
       )
     );
+    drupal_add_css(drupal_get_path('theme', 'wangrealestate') . '/css/wre-global.css',
+      array(
+        'group' => CSS_THEME,
+        'type' => 'file',
+        'weight' => 0,
+      )
+    );
 
     $prefix = 'wre-';
     $css_file = NULL;
@@ -59,10 +66,10 @@
         array(
           'group' => CSS_THEME,
           'type' => 'file',
-          'weight' => 1,
+          'weight' => 10,
         )
       );
-
-      $variables['styles'] = drupal_get_css();
     }
+
+    $variables['styles'] = drupal_get_css();
   }
