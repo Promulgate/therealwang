@@ -9,11 +9,13 @@
     $hooks['wre_header'] = array(
       'template' => 'wre-header',
       'path' => $tpl_path,
+      'variables' => array(),
     );
 
     $hooks['wre_footer'] = array(
       'template' => 'wre-footer',
       'path' => $tpl_path,
+      'variables' => array(),
     );
 
     return $hooks;
