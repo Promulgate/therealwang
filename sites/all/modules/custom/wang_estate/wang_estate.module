@@ -7,6 +7,53 @@
 /**
  * Implements hook_preprocess_hook().
  */
+function wang_estate_preprocess_page(&$variables) {
+  $node = $variables['node'];
+
+  if (!empty($node->type) && $node->type !== 'estate') {
+    return;
+  }
+
+  $wre_path = drupal_get_path('theme', 'wangrealestate');
+  $key = '?key=' . '';
+
+  drupal_add_js('https://maps.googleapis.com/maps/api/js' . $key, array(
+      'group' => JS_DEFAULT,
+      'type' => 'external',
+      'weight' => 0,
+    )
+  );
+  drupal_add_js($wre_path . '/plugins/slick/slick.js', array(
+      'group' => JS_DEFAULT,
+      'type' => 'file',
+      'weight' => 0,
+    )
+  );
+  drupal_add_js(drupal_get_path('module', 'wang_estate') . '/js/wang_estate.js', array(
+      'group' => JS_DEFAULT,
+      'type' => 'file',
+      'weight' => 0,
+    )
+  );
+  drupal_add_css($wre_path . '/plugins/slick/slick.css',
+    array(
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+      'weight' => -2,
+    )
+  );
+  drupal_add_css($wre_path . '/plugins/slick/slick-theme.css',
+    array(
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+      'weight' => -2,
+    )
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
 function wang_estate_preprocess_node(&$variables) {
   $node = $variables['node'];
 
