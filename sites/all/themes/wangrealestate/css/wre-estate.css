@@ -1,3 +1,6 @@
 body {
-  background: gray;
+  background: white;
+}
+.carousel ul {
+	list-style: none;
 }

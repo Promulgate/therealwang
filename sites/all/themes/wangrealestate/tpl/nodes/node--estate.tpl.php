@@ -4,6 +4,16 @@
  * Template file for the Estate content type.
  */
 ?>
+<div class="carousel">
+  <?php if (!empty($image_paths)): ?>
+    <ul>
+      <?php foreach ($image_paths as $key => $image): ?>
+        <li><img src="<?php print $image; ?>" /></li>
+      <?php endforeach; ?>
+    </ul>
+  <?php endif; ?>
+</div>
+
 <section class="info-description">
   <div class="title">
     <h2 class="name">
@@ -11,7 +21,7 @@
        <?php print $title; ?>
       <?php endif; ?>
     </h2>
-    
+
     <h3 class="address">
       <?php if(!empty($address)): ?>
         <?php print $address; ?>
@@ -19,19 +29,76 @@
     </h3>
   </div>
 
-  <p class="info">List Price: <span></span></p>
-  <p class="info">$/SqFt: <span></span></p>
-  <p class="beds">Bed: <span></span></p>
-  <p class="info">Bath: <span></span></p>
-  <p class="info">SqFt: <span></span></p>
-  <p class="info">Lot Size: <span></span></p>
-  <p class="info">Year Built: <span></span></p>
-  <p class="info">Property Type: <span></span></p>
-  <p class="info">Stories: <span></span></p>
-  <p class="info info-last">MLS#: Brian Wang<span></span></p>
+  <p class="info">
+    <?php if(!empty($list_price)): ?>
+      <?php print $list_price['amount']; ?>
+      <?php print $list_price['currency']; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info">
+    <?php if(!empty($cost_sqft)): ?>
+      <?php print $cost_sqft['amount']; ?>
+      <?php print $cost_sqft['currency']; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="beds">
+    <?php if(!empty($beds)): ?>
+      <?php print $beds; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info">
+    <?php if(!empty($baths)): ?>
+      <?php print $baths; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info">
+    <?php if(!empty($sqft)): ?>
+      <?php print $sqft; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info">
+    <?php if(!empty($lot_size)): ?>
+      <?php print $lot_size; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info">
+    <?php if(!empty($year_built)): ?>
+      <?php print $year_built; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info">
+    <?php if(!empty($property_type)): ?>
+      <?php print $property_type; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info">
+    <?php if(!empty($stories)): ?>
+      <?php print $stories; ?>
+    <?php endif; ?>
+  </p>
+
+  <p class="info info-last">
+    <?php if(!empty($mls)): ?>
+      <?php print $mls; ?>
+    <?php endif; ?>
+  </p>
+
   <h4 class="description">Description</h4>
-  <p class="description-info">DummyData DummyData DummyData DummyData DummyData DummyData DummyData DummyData DummyData DummyData DummyData DummyData DummyData DummyData</p>
+  <p class="description-info">
+    <?php if(!empty($description)): ?>
+      <?php print $description['safe_value']; ?>
+    <?php endif; ?>
+  </p>
 </section>
+<!--
 <article class="estate-container">
   <div>
     <?php if (!empty($beds)): ?>
@@ -125,3 +192,4 @@
     <?php endif; ?>
   </div>
 </article>
+-->
