@@ -1,14 +1,15 @@
 (function ($) {
     $(document).ready(function(){
-        $('.carousel').slick({
+        $('.carousel-list').slick({
             autoplay: true,
-            centerMode: true,
-            centerPadding: '10px',
+            //Hong's a wizard,
+            dots: true,
+            arrows: false,
             slidesToShow: 1
         });
     });
 
-    var key = 'AIzaSyDmXGedMBxA9o4UaXa9vQowIqQvKD1A4dg',
+    var key = 'AIzaSyBpK9J6q5IWEygekxYrmLbqx-UUOotNJ_A',
         address = '8324 st james ave elmhurst, ny';
     var geoUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURI(address) + '&key=' + key;
     console.log(geoUrl);

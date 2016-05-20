@@ -1,6 +1,31 @@
 body {
-  background: white;
+	background-color: white;
 }
-.carousel ul {
+.carousel {
+	width: 360px;
+	height: 480px;
+}
+.carousel-list {
 	list-style: none;
+	padding: 0;
+}
+.carousel-list li img {
+	max-width: 100%;
+}
+/* Info */
+/* Info */
+.title {
+	margin-bottom: 10px;
+	font-size: 1.6em;
+}
+.info {
+	margin: 2px;
+	border-bottom: .5px dotted black;
+}
+.description {
+	margin: 10px 0 10px 0;
+	font-size: 1.3em;
+}
+.description-info {
+	margin-bottom: 75px;
 }
