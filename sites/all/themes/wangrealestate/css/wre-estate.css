@@ -29,3 +29,7 @@ body {
 .description-info {
 	margin-bottom: 75px;
 }
+#googleMap {
+	width: 100%;
+	height: 250px;
+}

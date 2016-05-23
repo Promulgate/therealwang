@@ -15,7 +15,7 @@ function wang_estate_preprocess_page(&$variables) {
   }
 
   $wre_path = drupal_get_path('theme', 'wangrealestate');
-  $key = '?key=' . '';
+  $key = '?key=' . 'AIzaSyBpK9J6q5IWEygekxYrmLbqx-UUOotNJ_A';
 
   drupal_add_js('https://maps.googleapis.com/maps/api/js' . $key, array(
       'group' => JS_DEFAULT,

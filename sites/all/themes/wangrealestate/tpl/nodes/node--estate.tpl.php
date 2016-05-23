@@ -101,7 +101,7 @@
     <?php endif; ?>
   </div>
 
-  <h4 class="description">Description</h4>
+  <h4 id="test" class="description">Description</h4>
   <div class="description-info">
     <?php if(!empty($description)): ?>
       <?php print $description['safe_value']; ?>
@@ -109,13 +109,9 @@
   </div>
 </section>
 
-<div>
-    <?php if (!empty($geolocation)): ?>
-      <?php foreach ($geolocation as $key => $geo): ?>
-        <?php print $geo; ?>
-      <?php endforeach; ?>
-    <?php endif; ?>
-  </div>
+<div id="googleMap" data-lat="<?php print $geolocation['lat']; ?>" data-lng="<?php print $geolocation['lon']; ?>">
+
+</div>
 <!--
 <article class="estate-container">
   <div>

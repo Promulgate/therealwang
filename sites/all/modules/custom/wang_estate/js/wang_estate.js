@@ -9,17 +9,41 @@
         });
     });
 
+
+    function initialize() {
+var stuff = document.getElementById("googleMap"),
+    ab = stuff.getAttribute('data-lat'),
+    cd = stuff.getAttribute('data-lng'),
+    thisCenter = new google.maps.LatLng(ab,cd);
+      var mapProp = { 
+        center:thisCenter,
+        zoom:15,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker=new google.maps.Marker ({
+        position:thisCenter
+      });
+        marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+})(jQuery);
+
+/*
     var key = 'AIzaSyBpK9J6q5IWEygekxYrmLbqx-UUOotNJ_A',
         address = '8324 st james ave elmhurst, ny';
     var geoUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURI(address) + '&key=' + key;
     console.log(geoUrl);
+
     $.ajax({
         url: geoUrl,
         success: function(data) {
             //do something
         }
     });
-    /*
+*/
+
+/*
     var geocoder, map;
 
     function codeAddress(address) {
@@ -42,14 +66,4 @@
             }
         });
     }
-    */
-    /*function initialize() {
-      var mapProp = {
-        center:new google.maps.LatLng(51.508742,-0.120850),
-        zoom:15,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);*/
-})(jQuery);
+*/
