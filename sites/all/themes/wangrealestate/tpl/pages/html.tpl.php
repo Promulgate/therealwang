@@ -14,6 +14,7 @@
     </title>
     <?php print $styles; ?>
     <?php print $scripts; ?>
+    <style type="text/css"> #googleMap img { max-width: none; } </style>
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
     <?php print $page_top; ?>

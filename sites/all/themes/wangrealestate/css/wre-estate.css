@@ -4,6 +4,8 @@ body {
 .wrapper {
 	background-color: white;
 }
+/* Carousel */
+/* Carousel */
 .carousel {
 	width: 100%;
 	height: 250px;
@@ -13,10 +15,6 @@ body {
 	width: 360px;
 	height: 250px;
 	margin: 0 auto;	
-}
-.slick-track li {
-	height: 100%;
-	width: auto;
 }
 .slick-track li img {
 	height: 100%;
@@ -46,11 +44,15 @@ body {
 .description-info {
 	margin-bottom: 25px;
 }
+/* Map */
+/* Map */
 #googleMap {
 	width: 100%;
 	height: 250px;
 	margin-bottom: 30px;
 }
+/* Disclaimer */
+/* Disclaimer */
 .disclaimer-title {
 	font-size: 1.2em;
 	margin-left: 5px;

@@ -1,6 +1,6 @@
 <footer>
 	<div class="pic">
-		<img src="http://placekitten.com/g/44/44">
+		<img class="footer-pic"src="http://placekitten.com/g/44/44">
 	</div>
 	<section class="contact-container">
 		<h3 class="contact">
@@ -15,7 +15,7 @@
 			Cell: (347)737-0158
 		</h3>
 		<h3 class="number">
-			Office: (123)333-4422
+			Office: (516)331-5664
 		</h3>
 	</section>
 </footer>
