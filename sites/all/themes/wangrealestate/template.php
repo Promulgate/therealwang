@@ -25,7 +25,9 @@
    * Implements hook_preprocess_page().
    */
   function wangrealestate_preprocess_page(&$variables) {
-    $node = $variables['node'];
+    if (isset($variables['node'])) {
+      $node = $variables['node'];
+    }
 
     // Create render arrays for the header and footer.
     $variables['wre_header'] = array(
