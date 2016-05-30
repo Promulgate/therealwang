@@ -37,11 +37,6 @@
       '#theme' => 'wre_footer',
     );
 
-    // Add node specific CSS.
-    if (empty($node->type)) {
-      return;
-    }
-
     drupal_add_css(drupal_get_path('theme', 'wangrealestate') . '/css/wre-header-footer.css',
       array(
         'group' => CSS_THEME,
@@ -59,10 +54,18 @@
 
     $prefix = 'wre-';
     $css_file = NULL;
-    switch ($node->type) {
-      case 'estate':
-        $css_file = $prefix . 'estate';
-        break;
+
+    if (!empty($node->type)) {
+      switch ($node->type) {
+        case 'estate':
+          $css_file = $prefix . 'estate';
+          break;
+      }
+    }
+
+    // Special case for front page.
+    if (drupal_is_front_page()) {
+      $css_file = $prefix . 'front';
     }
 
     if ($css_file) {
