@@ -29,6 +29,30 @@
       $node = $variables['node'];
     }
 
+    if (drupal_is_front_page()) {
+      drupal_add_js(drupal_get_path('theme', 'wangrealestate') . '/plugins/handlebars/handlebars-v4.0.5.js',
+        array (
+          'group' => JS_DEFAULT,
+          'type' => 'file',
+          'weight' => 0,
+        )
+      );
+      drupal_add_js(drupal_get_path('theme', 'wangrealestate') . '/hbs/compiled.js',
+        array (
+          'group' => JS_DEFAULT,
+          'type' => 'file',
+          'weight' => 1,
+        )
+      );
+      drupal_add_js(drupal_get_path('theme', 'wangrealestate') . '/js/front.js',
+        array (
+          'group' => JS_DEFAULT,
+          'type' => 'file',
+          'weight' => 2,
+        )
+      );
+    }
+
     // Create render arrays for the header and footer.
     $variables['wre_header'] = array(
       '#theme' => 'wre_header',
