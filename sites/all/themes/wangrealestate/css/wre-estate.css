@@ -1,8 +1,10 @@
 body {
-	background-color: #dddddd;
+	background-color: #FFF9F9;
 }
 .wrapper {
 	background-color: white;
+	padding: 15px;
+	box-sizing: border-box;
 }
 /* Carousel */
 /* Carousel */

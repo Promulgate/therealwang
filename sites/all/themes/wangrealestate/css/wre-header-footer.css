@@ -12,11 +12,13 @@ footer {
 	max-height: 100%;
 }
 .pic {
+	width: 44px;
+	height: 44px;
 	margin: 3px 2px 3px 2px;
 	display: inline-block;
 }
 .contact-container {
-	height: 47px;
+	height: 43px;
 	vertical-align: bottom;
 	display: inline-block;
 }
@@ -29,6 +31,6 @@ footer {
 	display: inline-block;
 }
 .first {
-	margin-top: 6px;
+	margin-top: 8px;
 	float: right;
 }

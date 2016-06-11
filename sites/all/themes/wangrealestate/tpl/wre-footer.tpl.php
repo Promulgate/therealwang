@@ -1,6 +1,6 @@
 <footer>
 	<div class="pic">
-		<img class="footer-pic"src="http://placekitten.com/g/44/44">
+		<img class="footer-pic"src="/sites/all/themes/wangrealestate/img/brianface.jpg">
 	</div>
 	<section class="contact-container">
 		<h3 class="contact">
