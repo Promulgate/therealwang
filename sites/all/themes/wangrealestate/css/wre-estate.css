@@ -1,9 +1,6 @@
-body {
-	background-color: #FFF9F9;
-}
 .wrapper {
-	background-color: white;
-	padding: 15px;
+	background-color: #ffe4cc;
+	padding: 60px 15px 15px 15px;
 	box-sizing: border-box;
 }
 /* Carousel */
@@ -73,5 +70,8 @@ body {
 	}
 	.info {
 		margin: 10px;
+	}
+	body {
+	background-image: url('/sites/all/themes/wangrealestate/img/node.jpg');
 	}
 }

@@ -10,7 +10,18 @@
 <?php endif; ?>
 
 <div class="front-page">
+  <div class="cs-loader hide">
+    <div class="cs-loader-inner">
+      <label> ●</label>
+      <label> ●</label>
+      <label> ●</label>
+      <label> ●</label>
+      <label> ●</label>
+      <label> ●</label>
+    </div>
+  </div>
   <ul id="front-list">
+
   </ul>
 </div>
 

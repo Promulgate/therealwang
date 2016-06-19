@@ -34,7 +34,3 @@
   google.maps.event.addDomListener(window, 'load', initialize);
 
 })(jQuery);
- /* google.maps.event.addDomListener(map, 'drag', function(e) {
-        google.maps.event.trigger(map,'resize');
-        map.setZoom(map.getZoom());
-      });*/

@@ -17,9 +17,12 @@
         if (typeof pageNum === 'undefined') {
           return;
         }
-
+        var $csLoader = $('.front-page .cs-loader');
         $.ajax({
           url: 'http://local.wangrealestate.us/estates?page=' + pageNum,
+          beforeSend: function() {
+            $csLoader.removeClass('hide');
+          },
           success: function(data, status, xhr) {
             if (typeof data.nodes !== 'array' && data.nodes.length && typeof estateItemTemplate === 'function') {
               $.each(data.nodes, function (index, obj) {
@@ -33,6 +36,9 @@
                 $frontList.append(compiledTemplate);
               });
             }
+          },
+          complete: function() {
+            $csLoader.addClass('hide');
           }
         });
       };

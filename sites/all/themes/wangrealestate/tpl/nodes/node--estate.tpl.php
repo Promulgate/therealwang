@@ -34,27 +34,27 @@
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('List Price | 售價:'); ?>
+        <?php print t('List Price:'); ?>
       </h4>
       <?php if(!empty($list_price)): ?>
+        $
         <?php print $list_price['amount']; ?>
-        <?php print $list_price['currency']; ?>
       <?php endif; ?>
     </div>
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('$/Sqft | 每平尺價格:'); ?>
+        <?php print t('$/Sqft:'); ?>
       </h4>
       <?php if(!empty($cost_sqft)): ?>
+        $
         <?php print $cost_sqft['amount']; ?>
-        <?php print $cost_sqft['currency']; ?>
       <?php endif; ?>
     </div>
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('Beds | 臥室:'); ?>
+        <?php print t('Beds:'); ?>
       </h4>
       <?php if(!empty($beds)): ?>
         <?php print $beds; ?>
@@ -63,7 +63,7 @@
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('Baths | 浴室:'); ?>
+        <?php print t('Baths:'); ?>
       </h4>
       <?php if(!empty($baths)): ?>
         <?php print $baths; ?>
@@ -72,7 +72,7 @@
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('Sqft | 室內面積:'); ?>
+        <?php print t('Sqft:'); ?>
       </h4>
       <?php if(!empty($sqft)): ?>
         <?php print $sqft; ?>
@@ -81,7 +81,7 @@
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('Lot Size | 土地面積:'); ?>
+        <?php print t('Lot Size:'); ?>
       </h4>
       <?php if(!empty($lot_size)): ?>
         <?php print $lot_size; ?>
@@ -90,7 +90,7 @@
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('Year Built | 建造年份:'); ?>
+        <?php print t('Year Built:'); ?>
       </h4>
       <?php if(!empty($year_built)): ?>
         <?php print $year_built; ?>
@@ -99,7 +99,7 @@
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('Property Type | 房產類型:'); ?>
+        <?php print t('Property Type:'); ?>
       </h4>
       <?php if(!empty($property_type)): ?>
         <?php print $property_type; ?>
@@ -108,7 +108,7 @@
 
     <div class="info">
       <h4 class="info-type">
-        <?php print t('Stories | 樓層:'); ?>
+        <?php print t('Stories:'); ?>
       </h4>
       <?php if(!empty($stories)): ?>
         <?php print $stories; ?>
@@ -117,7 +117,7 @@
 
     <div class="info info-last">
       <h4 class="info-type">
-        <?php print t('MLS# | 地產編號:'); ?>
+        <?php print t('MLS#:'); ?>
       </h4>
       <?php if(!empty($mls)): ?>
         <?php print $mls; ?>
