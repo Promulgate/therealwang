@@ -19,7 +19,7 @@
         }
         var $csLoader = $('.front-page .cs-loader');
         $.ajax({
-          url: 'http://local.wangrealestate.us/estates?page=' + pageNum,
+          url: '/estates?page=' + pageNum,
           beforeSend: function() {
             $csLoader.removeClass('hide');
           },
