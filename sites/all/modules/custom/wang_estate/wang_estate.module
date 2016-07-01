@@ -7,6 +7,64 @@
 /**
  * Implements hook_preprocess_hook().
  */
+function wang_estate_preprocess_page(&$variables) {
+  // Add settings variables.
+  $estate_count = wang_estate_get_node_count('estate');
+  drupal_add_js(array(
+    'estate' => array(
+      'count' => $estate_count,
+    ),
+  ), 'setting');
+
+  if (!isset($variables['node'])) {
+    return;
+  }
+
+  $node = $variables['node'];
+  if (!empty($node->type) && $node->type !== 'estate') {
+    return;
+  }
+
+  $wre_path = drupal_get_path('theme', 'wangrealestate');
+  $key = '?key=' . 'AIzaSyBpK9J6q5IWEygekxYrmLbqx-UUOotNJ_A';
+
+  drupal_add_js('https://maps.googleapis.com/maps/api/js' . $key, array(
+      'group' => JS_DEFAULT,
+      'type' => 'external',
+      'weight' => 0,
+    )
+  );
+  drupal_add_js($wre_path . '/plugins/slick/slick.js', array(
+      'group' => JS_DEFAULT,
+      'type' => 'file',
+      'weight' => 0,
+    )
+  );
+  drupal_add_js(drupal_get_path('module', 'wang_estate') . '/js/wang_estate.js', array(
+      'group' => JS_DEFAULT,
+      'type' => 'file',
+      'weight' => 0,
+    )
+  );
+  drupal_add_css($wre_path . '/plugins/slick/slick.css',
+    array(
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+      'weight' => -2,
+    )
+  );
+  drupal_add_css($wre_path . '/plugins/slick/slick-theme.css',
+    array(
+      'group' => CSS_DEFAULT,
+      'type' => 'file',
+      'weight' => -2,
+    )
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
 function wang_estate_preprocess_node(&$variables) {
   $node = $variables['node'];
 
@@ -41,4 +99,20 @@ function get_field($node, $field_name, $entity_type = 'node') {
   $node_wrapper = entity_metadata_wrapper($entity_type, $node);
 
   return $node_wrapper->$field_name->value();
+}
+
+/**
+ * Helper function to get the total number of nodes per node type.
+ *
+ * @param string $node_type
+ *   - The node type.
+ *
+ * @return integer
+ *   - The total number of nodes of the given type.
+ */
+function wang_estate_get_node_count($node_type) {
+  $query = "SELECT COUNT(*) amount FROM {node} n " . "WHERE n.type = :type";
+  $result = db_query($query, array(':type' => $node_type))->fetch();
+
+  return $result->amount;
 }

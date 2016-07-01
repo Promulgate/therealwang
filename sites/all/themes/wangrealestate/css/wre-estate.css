@@ -1,0 +1,77 @@
+.wrapper {
+	background-color: #ffe4cc;
+	padding: 60px 15px 15px 15px;
+	box-sizing: border-box;
+}
+/* Carousel */
+/* Carousel */
+.carousel {
+	width: 100%;
+	height: 250px;
+}
+.slick-track {
+	list-style: none;
+	width: 360px;
+	height: 250px;
+	margin: 0 auto;	
+}
+.slick-track li img {
+	height: 100%;
+	width: auto;
+	margin: 0 auto;
+}
+/* Info */
+/* Info */
+.info-description {
+	margin-top: 30px;
+}
+.title {
+	margin-bottom: 10px;
+	font-size: 1.6em;
+}
+.info-type {
+	display: inline-block;
+}
+.info {
+	margin: 2px;
+	border-bottom: .5px dotted black;
+}
+.description {
+	margin: 10px 0 10px 0;
+	font-size: 1.3em;
+}
+.description-info {
+	margin-bottom: 25px;
+}
+/* Map */
+/* Map */
+#googleMap {
+	width: 100%;
+	height: 250px;
+	margin-bottom: 30px;
+}
+/* Disclaimer */
+/* Disclaimer */
+.disclaimer-title {
+	font-size: 1.2em;
+	margin-left: 5px;
+}
+.disclaimer-info {
+	font-size: .5em;
+	padding-bottom: 60px;
+}
+@media all and (min-width: 720px) {
+	.wrapper {
+		width: 720px;
+		margin: auto;
+	}
+	.info-type {
+		font-size: 1.1em;
+	}
+	.info {
+		margin: 10px;
+	}
+	body {
+	background-image: url('/sites/all/themes/wangrealestate/img/node.jpg');
+	}
+}
