@@ -26,10 +26,11 @@
           success: function(data, status, xhr) {
             if (typeof data.nodes !== 'array' && data.nodes.length && typeof estateItemTemplate === 'function') {
               $.each(data.nodes, function (index, obj) {
-                if (typeof obj.node !== 'object') {
+                if (typeof obj.node !== 'object' || typeof obj.node.images === 'undefined') {
                   return;
                 }
 
+                // Append template.
                 var compiledTemplate = estateItemTemplate(obj.node),
                     $frontList = $('#front-list');
 
