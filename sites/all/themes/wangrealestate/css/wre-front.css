@@ -8,7 +8,7 @@ a:link, a:visited {
 }
 a:hover {
   text-decoration: underline;
-  color: #633636;
+  color: #7f3137;
 }
 .front-item {
 	width: 100%;
@@ -16,7 +16,7 @@ a:hover {
   list-style: none;
 }
 .front-wrapper {
-  background-color: #ffe4cc;
+  background-color: #f5f9ff;
   padding: 10px;
   box-sizing: border-box;
   display: table;
