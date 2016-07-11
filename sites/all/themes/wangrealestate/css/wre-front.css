@@ -2,11 +2,11 @@ body {
   background-image: none;
   padding: 50px 0;
 }
-a:link, a:visited {
+.front-page a:link, a:visited {
   text-decoration: none;
   color: #000;
 }
-a:hover {
+.front-page a:hover {
   text-decoration: underline;
   color: #7f3137;
 }

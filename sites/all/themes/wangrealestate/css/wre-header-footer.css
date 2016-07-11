@@ -14,15 +14,20 @@ header {
   width: 100%;
   height: 100%;
 }
-.header-logo, .header-name {
+.header-logo {
   display: table-cell;
   vertical-align: middle;
   font-size: 2em;
-}
-.header-logo {
-  text-align: right;
+  text-align: center;
   padding-right: 7px;
   box-sizing: border-box;
+}
+.header-logo a:visited, .header-logo a:link {
+  text-decoration: none;
+  color: white;
+}
+.header-logo a:hover {
+  color: #000;
 }
 /*
  * Footer
