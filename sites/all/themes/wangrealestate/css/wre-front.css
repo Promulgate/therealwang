@@ -2,6 +2,9 @@ body {
   background-image: none;
   padding: 50px 0;
 }
+.front-page {
+  margin-top: 50px;
+}
 .front-page a:link, a:visited {
   text-decoration: none;
   color: #000;
@@ -16,7 +19,7 @@ body {
   list-style: none;
 }
 .front-wrapper {
-  background-color: #f5f9ff;
+  background-color: rgba(245, 249, 255, .9);
   padding: 10px;
   box-sizing: border-box;
   display: table;
