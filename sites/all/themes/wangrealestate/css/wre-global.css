@@ -27,7 +27,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+@font-face {
+  font-family: FontAwesome;
+  src: url('../font-awesome/fonts/fontawesome-webfont.woff');
+}
 /**
  * Load Animation
  */
