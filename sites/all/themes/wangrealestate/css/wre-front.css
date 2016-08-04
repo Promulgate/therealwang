@@ -70,3 +70,8 @@ body {
     background-image: url('/sites/all/themes/wangrealestate/img/front.jpg');
   }
 }
+@media all and (max-width: 500px) {
+  .front-page {
+    margin-top: 0px;
+  }
+}
