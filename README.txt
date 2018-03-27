@@ -1,5 +1,5 @@
 
-* Client discontinued the domain *
+* Client has discontinued the domain *
 
 
 CONTENTS OF THIS FILE
