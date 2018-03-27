@@ -1,4 +1,7 @@
 
+* Client discontinued the domain *
+
+
 CONTENTS OF THIS FILE
 ---------------------
 
